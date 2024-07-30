@@ -39,6 +39,7 @@ export interface AbCampoTextoProps {
     type?: 'text' | 'email' | 'password' | 'date';
     onChange: (value: string) => void
     darkmode?: boolean
+    e?: HTMLInputElement
 }
 
 export const AbCampoTexto = ({ 
@@ -61,7 +62,7 @@ export const AbCampoTexto = ({
                 darkmode={darkmode}
                 type={type}
                 value={value}
-                onChange={event => onChange(event.target.value)}
+                onChange={e => onChange(e.target.value)}
             />
         </div>
     )
